@@ -1,13 +1,11 @@
 <template>
-  <div id="app">
-    <h1 class="display-2">Hello World</h1>
-    <Form />
+  <div id="nav">
+    <router-link to="/signup">SignUp</router-link> |
+    <router-link to="/login">LogIn</router-link>
+    <router-view/>
   </div>
+  
 </template>
-
-<script lang="ts" setup>
-import Form from './components/Form.vue'
-</script>
 
 <style>
 #app {
@@ -16,7 +14,18 @@ import Form from './components/Form.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#nav {
   padding: 30px;
-  /* margin: 60px 30px; */
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
